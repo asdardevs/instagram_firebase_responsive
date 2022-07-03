@@ -8,8 +8,10 @@ import 'package:instagram_flutter/widgets/text_field_input.dart';
 class SignUpPage extends StatelessWidget {
   SignUpPage({Key? key}) : super(key: key);
 
-  final TextEditingController _email = TextEditingController();
-  final TextEditingController _password = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _bioController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -35,14 +37,14 @@ class SignUpPage extends StatelessWidget {
             ),
             TextFieldInput(
                 hintText: "Enter your email",
-                textEditingController: _email,
+                textEditingController: _emailController,
                 textInputType: TextInputType.emailAddress),
             const SizedBox(
               height: 24,
             ),
             TextFieldInput(
                 hintText: "Password",
-                textEditingController: _password,
+                textEditingController: _passwordController,
                 isPass: true,
                 textInputType: TextInputType.text),
             const SizedBox(
